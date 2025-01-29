@@ -75,7 +75,6 @@ public class DocumentService {
         chatMessages.add(UserMessage.from(userMessage));
 
         // Invoke the LLM
-        log.info("### Invoke the LLM");
         Response<AiMessage> response = chatLanguageModel.generate(chatMessages);
         return response.content().text();
     }
