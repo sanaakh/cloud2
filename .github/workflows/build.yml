@@ -90,6 +90,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+
           file: DockerFile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/spring-rag:latest
@@ -105,7 +106,7 @@ jobs:
         run: kubectl get nodes
       - name: Deploy the image to minikube
         run: |
-          docker pull lufroone/spring-rag:latest
+          docker pull sanaa19/spring-rag:latest
           kubectl apply -f src/main/k8s/deployment.yml
       - name: Get Kubernetes service URL
         run: |
