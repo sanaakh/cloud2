@@ -1,4 +1,4 @@
-nname: Java 23 Build
+name: Java 23 Build
 
 on:
   push:
